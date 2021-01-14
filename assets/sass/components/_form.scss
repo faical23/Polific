@@ -1,0 +1,72 @@
+
+
+form {
+	position: relative;
+	text-align: center;
+	img{
+		position: relative;
+		left:-5px;
+	}
+	input {
+		margin-left:-59px;
+		width: 52%;
+		border-radius: 5px;
+		box-shadow: 0px 3px 35px rgba(66, 65, 65, 0.1);
+		padding: 24px 55px;
+		border: none;
+		border:1px solid $secondary-100;
+	}
+	::placeholder{
+		font-family: 'Barlow-Light';
+		font-size: 18px;
+	}
+	button {
+		position: absolute;
+		right: 254px;
+		top: 49%;
+		transform: translateY(-50%);
+		@include flex(center, center);
+		cursor: pointer;
+        background-image: linear-gradient(to right , $secondary-200, $secondary-100);
+		padding: 24px 46px 24px 45px;
+		border-radius: 5px 5px 5px 5px;
+		color:white;
+		font-size: 18px;
+		font-family: 'Barlow-Regular';
+		border:1px solid $secondary-100;
+
+		&:hover {
+			background-image: linear-gradient(to left , $secondary-200, $secondary-100);
+		}
+    }
+    
+    @include for-size(desktop-down) {
+        button {
+            right: 228px;
+        }
+    }
+    @include for-size(tablet-landscape-down) {
+        button {
+            right: 84px;
+        }
+        input {
+            width: 77%;
+        }
+    }
+    @include for-size(tablet-portrait-down) {
+        button {
+            right: 17px;
+        }
+        input {
+            width: 93%;
+        }
+    }
+    @include for-size(phone-only ) {
+        button {
+            right:8px;
+            padding: 12px 16px 11px 21px;        }
+        input {
+            padding: 12px 47px;
+        }
+    }
+}

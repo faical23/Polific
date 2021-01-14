@@ -1,0 +1,128 @@
+
+////// cervo font
+@font-face{
+    font-family: 'CervoNeueBoldNeue';
+    src:url(../fonts/cervo-neue/CervoNeueBoldNeue.otf);
+}
+
+//// barlow font
+
+@font-face{
+    font-family: 'Barlow-Regular';
+    src:url(../fonts/Barlow/Barlow-Regular.ttf);
+}
+@font-face{
+    font-family: 'Barlow-Medium';
+    src:url(../fonts/Barlow/Barlow-Medium.ttf);
+}
+@font-face{
+    font-family: 'Barlow-Light';
+    src:url(../fonts/Barlow/Barlow-Light.ttf);
+}
+
+/*=== Typography Styling ===*/
+
+* {
+	//font-family: $primary-regular, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	font-size: $size-small;
+}
+
+h1,
+h2,span{
+	font-family: 'CervoNeueBoldNeue';
+	color: $primary-100;
+	font-stretch: normal;
+	font-weight: bold;
+	letter-spacing: normal;
+	line-height: 72px;
+}
+h1{
+	font-size: 50px;
+}
+span{
+	color:$secondary-100;
+}
+h2,span{
+	font-size: 32px;
+}
+
+.p-M,.p-R,.p-L{
+	font-weight: normal;
+	letter-spacing: normal;
+}
+.p-R {
+	font-family:'Barlow-Regular';
+}
+.p-M{
+	font-family: 'Barlow-Medium';
+}
+.p-L{
+	font-family: 'Barlow-Light';
+}
+
+label {
+	//font-family: $primary-SemiBold;
+	font-weight: 600;
+	//font-size: $size-small;
+	line-height: 1.63;
+	display: block;
+}
+
+a {
+	font-family: 'Barlow-Regular';
+	font-size: 22px;
+	font-weight: 500;
+	font-stretch: normal;
+	letter-spacing: normal;
+	color: $white;
+	&:hover {
+		color: $secondary-100;
+		text-decoration: none;
+	}
+}
+
+::placeholder {
+	font-family: 'Barlow-Light';
+	font-style: normal;
+	letter-spacing: normal;
+}
+
+@include for-size(phone-only) {
+	h1{
+		font-size: $size-x-larg;
+	}
+	h2,span {
+		font-size: $size-larg;
+	}
+	h3 {
+		font-size: $size-medium;
+	}
+	h4 {
+		font-size: $size-regular;
+	}
+	h5 {
+		font-size: $size-small;
+	}
+	h6 {
+		font-size: $size-x-small;
+	}
+	p {
+		font-size: $size-small;
+
+		&.semi {
+			font-size: $size-xx-small;
+		}
+		&.reg {
+			font-size: $size-xx-small;
+		}
+		&.med {
+			font-size: $size-x-small;
+		}
+		&.large {
+			font-size: $size-regular;
+		}
+	}
+}

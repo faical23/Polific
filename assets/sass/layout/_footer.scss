@@ -1,0 +1,26 @@
+footer{
+    text-align: center;
+    .logo{
+        padding-bottom: 20px;
+    }
+    .p-R{
+        color:$primary-300;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.4;
+        font-size: 18px;
+    }
+    .social-media{
+        img{
+            background-color: rgb(230, 224, 224);
+            border-radius: 50%;
+            padding: 13px 13px;
+            margin: 8px; 
+            cursor: pointer;   
+            &:hover{
+                background-color:$secondary-200;
+            } 
+       }
+    }
+}
